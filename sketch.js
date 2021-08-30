@@ -72,6 +72,11 @@ let barnacle = {
 };
 
 barnacle.diametro = window.prompt("Tamaño para cada crustáceo:", 10);
+if (barnacle.diametro < 3) {
+  barnacle.diametro = 3;
+} else if (barnacle.diametro > 100) {
+  barnacle.diametro = 100
+}
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
